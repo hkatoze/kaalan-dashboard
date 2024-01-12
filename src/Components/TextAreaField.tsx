@@ -15,7 +15,6 @@ interface TextAreaFieldProps {
 const TextAreaField = ({
   placeholder,
   name,
-  label,
   height,
   width,
   onChange,

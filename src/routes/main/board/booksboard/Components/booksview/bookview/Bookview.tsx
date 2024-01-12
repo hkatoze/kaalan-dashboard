@@ -8,7 +8,7 @@ import { useMutation, useQuery, useQueryClient } from "react-query";
 import { ClipLoader } from "react-spinners";
 import { MdDescription } from "react-icons/md";
 import { endpoint, headers } from "../../../../../../../constants";
-import { PiBooksDuotone } from "react-icons/pi";
+ 
 
 const Bookview = () => {
   const navigate = useNavigate();

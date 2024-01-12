@@ -35,7 +35,7 @@ export const EditBook = () => {
   const {
     data: authors,
     isLoading: authorsIsLoading,
-    isError: authorsIsError,
+ 
   } = useQuery({
     queryKey: ["all-authors-list"],
     queryFn: fetchAllAuthors,
@@ -44,7 +44,7 @@ export const EditBook = () => {
   const {
     data: categories,
     isLoading: categoriesIsLoading,
-    isError: categoriesIsError,
+ 
   } = useQuery({
     queryKey: ["all-categories-list"],
     queryFn: fetchAllCategories,

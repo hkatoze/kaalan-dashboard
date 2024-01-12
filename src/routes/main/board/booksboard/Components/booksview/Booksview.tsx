@@ -1,5 +1,4 @@
 import "./Booksview.css";
-import BOOK1 from "../../../../../../assets/book-img.jpg";
 import Header from "../../../../../../Components/Header";
 import { BookItem } from "./components/BookItem";
 import { BooksviewHeaderActions } from "./components/BooksviewHeaderActions";

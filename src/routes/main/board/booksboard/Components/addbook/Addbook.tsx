@@ -1,4 +1,4 @@
-import { useMutation, useQueries, useQuery, useQueryClient } from "react-query";
+import { useMutation, useQuery, useQueryClient } from "react-query";
 import "./Addbook.css";
 import axios, { AxiosError } from "axios";
 import { FormEvent, useState } from "react";
@@ -38,7 +38,7 @@ const Addbook = () => {
   const {
     data: authors,
     isLoading: authorsIsLoading,
-    isError: authorsIsError,
+   
   } = useQuery({
     queryKey: ["all-authors-list"],
     queryFn: fetchAllAuthors,
@@ -47,7 +47,7 @@ const Addbook = () => {
   const {
     data: categories,
     isLoading: categoriesIsLoading,
-    isError: categoriesIsError,
+   
   } = useQuery({
     queryKey: ["all-categories-list"],
     queryFn: fetchAllCategories,
