@@ -1,0 +1,11 @@
+.notificationItem {
+  display: flex;
+  gap: 0.5rem;
+}
+.notificationItem img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.notificationItem .noti div span:nth-of-type(1) {
+  font-weight: bold;
+}/*# sourceMappingURL=NotificationItem.css.map */

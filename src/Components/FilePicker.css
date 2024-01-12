@@ -1,0 +1,63 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverCOlor: #f95454;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.imagePicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.imagePicker label {
+  color: var(--textColor);
+  font-weight: 700;
+}
+.imagePicker .inputDiv {
+  padding: 0.5rem;
+  background-color: var(--whiteColor);
+  border-radius: 5px;
+  gap: 1rem;
+  box-shadow: 0 2px 4px var(--inputColor);
+}
+.imagePicker .inputDiv .imageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  border: 1px dotted var(--textColor);
+  gap: 1rem;
+}
+.imagePicker .inputDiv .imageBox span {
+  font-size: var(--smallFontSize);
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--textColor);
+}
+.imagePicker .inputDiv input {
+  display: none;
+}/*# sourceMappingURL=FilePicker.css.map */

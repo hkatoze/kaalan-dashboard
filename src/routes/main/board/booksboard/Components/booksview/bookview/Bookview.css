@@ -1,0 +1,219 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverCOlor: #f95454;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.bookView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bookView .backButtonSection {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.bookView .backButtonSection .backButton {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.bookView .bottomSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+}
+.bookView .bottomSection .informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.5rem;
+}
+.bookView .bottomSection .informations .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+.bookView .bottomSection .informations .title div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: var(--PrimaryColor);
+  border-radius: 100px;
+}
+.bookView .bottomSection .informations .title h2 {
+  font-size: var(--h2FontSize);
+  width: 50%;
+}
+.bookView .bottomSection .informations .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+.bookView .bottomSection .informations .content .coverBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bookView .bottomSection .informations .content .coverBox .cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(244, 236, 236);
+  padding: 0.3rem;
+}
+.bookView .bottomSection .informations .content .coverBox .cover img {
+  height: 12rem;
+  width: 8rem;
+}
+.bookView .bottomSection .informations .content .book {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.bookView .bottomSection .informations .content .book div {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 1rem;
+}
+.bookView .bottomSection .informations .content .book div h3 {
+  font-size: var(--h3FontSize);
+}
+.bookView .bottomSection .informations .content .book div span {
+  display: flex;
+  width: 14rem;
+  justify-content: flex-start;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+.bookView .bottomSection .informations .content .actionsBlock {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.bookView .bottomSection .informations .content .actionsBlock .edit {
+  color: var(--SecondaryColor);
+}
+.bookView .bottomSection .informations .content .actionsBlock .edit a {
+  text-decoration: none;
+  color: inherit;
+}
+.bookView .bottomSection .informations .content .actionsBlock .delete {
+  color: var(--PrimaryColor);
+}
+.bookView .bottomSection .informations .content .actionsBlock span {
+  display: flex;
+  cursor: pointer;
+  transition: all ease-out 0.5s;
+  padding: 5px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px;
+}
+.bookView .bottomSection .informations .content .actionsBlock span:hover {
+  background-color: rgba(238, 235, 235, 0.5);
+}
+.bookView .bottomSection .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+  width: 25vw;
+  height: 80vh;
+}
+.bookView .bottomSection .description .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+.bookView .bottomSection .description .title div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: var(--PrimaryColor);
+  border-radius: 100px;
+}
+.bookView .bottomSection .description .title h2 {
+  font-size: var(--h2FontSize);
+}
+.bookView .bottomSection .description .content {
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 840px) {
+  .bookView {
+    justify-content: center;
+  }
+  .bookView .bottomSection {
+    justify-content: center;
+    gap: 2rem;
+  }
+  .bookView .bottomSection .description {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 645px) {
+  .bookView .bottomSection .description {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 645px) {
+  .bookView .bottomSection .description {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    width: 100%;
+    height: 100%;
+  }
+}/*# sourceMappingURL=Bookview.css.map */

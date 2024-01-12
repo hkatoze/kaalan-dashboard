@@ -1,0 +1,66 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverCOlor: #f95454;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.bookItem {
+  text-decoration: none;
+  width: 6.5rem;
+  color: inherit;
+}
+.bookItem div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.2rem;
+  transition: 0, 3s all ease-out;
+}
+.bookItem div .imageBox {
+  border: 1px solid rgb(244, 236, 236);
+  padding: 0.3rem;
+}
+.bookItem div .imageBox img {
+  height: 10rem;
+  width: 6.5rem;
+}
+.bookItem div h3 {
+  font-size: var(--normalFontSize);
+  width: 6.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-lines: 2;
+}
+.bookItem div .subtitle {
+  font-weight: normal;
+  color: rgb(194, 194, 194);
+  max-lines: 2;
+  width: 6.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bookItem div:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}/*# sourceMappingURL=BookItem.css.map */

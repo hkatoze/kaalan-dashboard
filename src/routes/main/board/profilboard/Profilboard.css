@@ -1,0 +1,143 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(0, 100%, 60%);
+  --SecondaryColor: hsl(210, 100%, 59%);
+  --HoverCOlor: #f95454;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.profilBoard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.profilBoard .body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 5rem;
+}
+.profilBoard .body .profilImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.profilBoard .body .profilImg img {
+  width: 150px;
+  height: 150px;
+}
+.profilBoard .body .profilImg h3 {
+  font-size: var(--h2FontSize);
+  color: var(--SecondaryColor);
+  font-weight: 500;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+.profilBoard .body .profilImg h3:hover {
+  text-decoration: underline;
+  transition: 0.5s ease-out;
+}
+.profilBoard .body .profilImg .disconnect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.profilBoard .body .profilImg .disconnect svg {
+  color: var(--PrimaryColor);
+}
+.profilBoard .body .profilImg .disconnect:hover {
+  color: var(--PrimaryColor);
+}
+.profilBoard .body .rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.profilBoard .body .rightSide .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 2px solid grey;
+  padding-bottom: 2rem;
+}
+.profilBoard .body .rightSide .infos div {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.profilBoard .body .rightSide .infos div h3 {
+  font-size: var(--h3FontSize);
+  width: 10rem;
+}
+.profilBoard .body .rightSide .infos div span {
+  width: 15rem;
+  padding: 0.3rem 0.3rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: var(--normalFontSize);
+}
+.profilBoard .body .rightSide .infos div input {
+  border: none;
+  font-size: var(--normalFontSize);
+  outline: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0.3rem 0.3rem;
+  border-radius: 2px;
+  color: var(--PrimaryColor);
+  width: 15rem;
+  font-weight: 500;
+}
+.profilBoard .body .rightSide .actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.profilBoard .body .rightSide .actions button {
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.profilBoard .body .rightSide .actions button:hover {
+  background-color: #f0f0f0;
+}
+.profilBoard .body .rightSide .actions .edit {
+  background-color: var(--SecondaryColor);
+}
+.profilBoard .body .rightSide .actions .edit:hover {
+  color: var(--SecondaryColor);
+}
+.profilBoard .body .rightSide .actions .resetPassword {
+  background-color: var(--PrimaryColor);
+}
+.profilBoard .body .rightSide .actions .resetPassword:hover {
+  color: var(--PrimaryColor);
+}/*# sourceMappingURL=Profilboard.css.map */

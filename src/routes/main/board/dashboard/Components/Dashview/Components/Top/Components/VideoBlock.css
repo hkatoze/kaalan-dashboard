@@ -1,0 +1,118 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverColor: #f95454;
+  --paleGreen: hsl(31, 100%, 69%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.videoBlock {
+  position: relative;
+  flex-basis: 70%;
+  height: 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.videoBlock .videoDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.videoBlock .videoDiv video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.videoBlock h1,
+.videoBlock p,
+.videoBlock .buttons {
+  z-index: 100;
+}
+.videoBlock h1 a,
+.videoBlock p a,
+.videoBlock .buttons a {
+  text-decoration: none;
+  color: inherit;
+}
+.videoBlock h1 {
+  font-size: var(--h1FontSize);
+  color: var(--whiteColor);
+  font-weight: 800;
+}
+.videoBlock p {
+  padding: 1rem;
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.videoBlock .buttons {
+  gap: 1rem;
+}
+.videoBlock .buttons .btn {
+  box-shadow: none;
+  padding: 0.8rem 1.5rem;
+  color: var(--PrimaryColor);
+  border: 2px solid transparent;
+}
+.videoBlock .buttons .transparent {
+  background: none;
+  border: 2px solid var(--paleGreen);
+  color: var(--paleGreen);
+}
+.videoBlock .buttons .transparent:hover {
+  background: var(--paleGreen);
+  color: var(--PrimaryColor);
+}
+
+@media screen and (max-width: 990px) {
+  .videoBlock {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .videoBlock {
+    text-align: center;
+  }
+  .videoBlock .buttons {
+    margin: auto;
+    flex-direction: column;
+  }
+  .videoBlock .buttons .btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .videoBlock {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .videoBlock h2 {
+    font-size: var(--h2FontSize);
+  }
+}/*# sourceMappingURL=VideoBlock.css.map */

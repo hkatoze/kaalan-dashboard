@@ -1,0 +1,94 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverColor: hsl(31, 100%, 67%);
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+/* MenuListItem.scss */
+.listItem {
+  padding: 0.2rem 1.5rem;
+  width: 100%;
+  position: relative;
+}
+.listItem::before {
+  position: absolute;
+  content: "";
+  height: 0%;
+  left: 0;
+  width: 5px;
+  bottom: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--PrimaryColor);
+}
+.listItem:hover .menuLink {
+  color: var(--PrimaryColor);
+  transition: 0s;
+}
+.listItem.selected .menuLink {
+  height: 100%;
+  color: var(--PrimaryColor);
+  transition: 0s;
+}
+.listItem:hover::before {
+  height: 100%;
+  transition: 0.3s ease;
+}
+.listItem.selected::before {
+  height: 100%;
+  transition: 0.3s ease;
+}
+.listItem .menuLink {
+  justify-content: start;
+  color: var(--greyText);
+  font-weight: 500;
+  transition: 0s;
+}
+.listItem .menuLink .icon {
+  font-size: var(--h1FontSize);
+  margin-right: 0.5rem;
+}
+.listItem .menuLink.flex {
+  display: flex;
+}
+
+@media screen and (max-width: 390px) {
+  .listItem {
+    padding: 0.2rem 0.5rem;
+  }
+  .listItem .menuLink {
+    justify-content: center;
+  }
+  .listItem .menuLink .icon {
+    font-size: var(--h1FontSize);
+  }
+}
+@media screen and (max-width: 745px) {
+  .listItem .menuLink {
+    justify-content: center;
+  }
+  .listItem .menuLink .icon {
+    font-size: var(--h1FontSize);
+  }
+  .listItem .menuLink .smallText {
+    display: none;
+  }
+}/*# sourceMappingURL=MenuListItem.css.map */

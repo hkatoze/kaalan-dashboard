@@ -1,0 +1,56 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverCOlor: #f95454;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.logoDiv {
+  padding: 1.5rem 1.5rem 0;
+  cursor: pointer;
+}
+.logoDiv img {
+  max-width: 20px;
+  margin-right: 0.5rem;
+  background-color: var(--inputColor);
+  border-radius: 2px;
+  padding: 0.2rem;
+}
+.logoDiv h2 {
+  font-size: var(--h1FontSize);
+  color: var(--PrimaryColor);
+}
+
+@media screen and (max-width: 745px) {
+  .logoDiv {
+    text-align: center;
+    margin: auto;
+    padding: 1.5rem 0.5rem 0;
+  }
+  .logoDiv img {
+    max-width: 50px;
+    margin: 0;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+  .logoDiv h2 {
+    display: none;
+  }
+}/*# sourceMappingURL=Logo.css.map */

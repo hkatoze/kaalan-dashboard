@@ -1,0 +1,10 @@
+.dashview {
+  display: flex;
+  flex-direction: column;
+}
+.dashview .body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+}/*# sourceMappingURL=Dashview.css.map */

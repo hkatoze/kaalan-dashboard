@@ -1,0 +1,104 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverColor: #f95454;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.loginpage {
+  height: 80vh;
+  width: 31rem;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 3rem;
+}
+.loginpage .logo {
+  justify-content: end;
+  align-items: end;
+}
+.loginpage .logo img {
+  width: 50px;
+  height: 50px;
+}
+.loginpage .logo span {
+  font-size: var(--h1FontSize);
+  font-weight: bold;
+}
+.loginpage h2 {
+  font-weight: normal;
+  font-size: var(--h2FontSize);
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.loginpage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.loginpage form .errorMessage {
+  width: 20rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  color: red;
+}
+.loginpage form .staySigned {
+  display: flex;
+  justify-content: space-between;
+}
+.loginpage form .staySigned div {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.loginpage form .staySigned div label {
+  font-size: var(--smallFontSize);
+}
+.loginpage form .staySigned a {
+  text-decoration: none;
+  color: inherit;
+  font-size: var(--smallFontSize);
+}
+.loginpage form .newUserSection {
+  font-size: var(--normalFontSize);
+  margin-top: 7rem;
+}
+.loginpage form .newUserSection a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--blackColor);
+}
+
+@media screen and (max-height: 700px) {
+  .loginpage {
+    height: 95vh;
+  }
+  .loginpage form .newUserSection {
+    margin-top: 5rem;
+  }
+}/*# sourceMappingURL=Login.css.map */

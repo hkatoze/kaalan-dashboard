@@ -1,0 +1,18 @@
+.notificationItem {
+  display: flex;
+
+  gap: 0.5rem;
+  img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .noti {
+    div {
+      span {
+        &:nth-of-type(1) {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

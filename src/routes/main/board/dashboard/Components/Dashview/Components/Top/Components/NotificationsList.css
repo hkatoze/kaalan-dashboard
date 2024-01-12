@@ -1,0 +1,8 @@
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.notifications .head {
+  margin-top: 2.5rem;
+}/*# sourceMappingURL=NotificationsList.css.map */

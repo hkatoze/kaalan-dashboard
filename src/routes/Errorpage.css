@@ -1,0 +1,11 @@
+.errorPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.errorPage p i {
+  color: rgb(206, 96, 96);
+}/*# sourceMappingURL=Errorpage.css.map */

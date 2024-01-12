@@ -1,0 +1,124 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverColor: #f95454;
+  --paleGreen: hsl(31, 100%, 69%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.rightBlock {
+  flex-basis: 50%;
+}
+.rightBlock .main {
+  position: relative;
+  padding: 1rem;
+  height: 200px;
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+.rightBlock .main::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  background-color: var(--paleGreen);
+  left: 0;
+  bottom: 0;
+  border-radius: 1rem;
+}
+.rightBlock .main .textDiv {
+  z-index: 100;
+}
+.rightBlock .main .textDiv h1 {
+  font-size: var(--h1FontSize);
+  padding-bottom: 1rem;
+  color: var(--blackColor);
+}
+.rightBlock .main .textDiv .flex {
+  gap: 1.5rem;
+  font-weight: 500;
+  color: var(--blackColor);
+}
+.rightBlock .main .textDiv .flex small {
+  font-size: var(--normalFontSize);
+  display: block;
+  color: var(--PrimaryColor);
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+.rightBlock .main .textDiv .link {
+  margin-top: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.rightBlock .main .textDiv .link:hover {
+  color: var(--PrimaryColor);
+}
+.rightBlock .main .textDiv .link:hover .icon {
+  transform: translateX(10px);
+  transition: 0.3s ease;
+}
+.rightBlock .main .imgDiv {
+  transform: translateY(-20px);
+}
+.rightBlock .main .imgDiv img {
+  z-index: 10;
+  width: 190px;
+}
+.rightBlock .sideBarCard {
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .rightBlock {
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 2.5rem;
+    align-items: flex-start;
+    height: 10px !important;
+  }
+  .rightBlock .sideBarCard {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 725px) {
+  .rightBlock .main {
+    width: 100%;
+  }
+  .rightBlock .sideBarCard {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 490px) {
+  .rightBlock .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rightBlock .main .textDiv {
+    margin: auto;
+  }
+  .rightBlock .main::before {
+    width: 100% !important;
+  }
+  .rightBlock .main .imgDiv {
+    display: none;
+  }
+}/*# sourceMappingURL=RightBlock.css.map */

@@ -1,0 +1,110 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: hsl(31, 78%, 56%);
+  --SecondaryColor: hsl(203, 95%, 42%);
+  --HoverCOlor: #f95454;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.25rem;
+  --h2FontSize: 1rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.headerSection {
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.headerSection .backButton {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.headerSection .title h1 {
+  font-size: var(--h1FontSize);
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.headerSection .title p {
+  font-size: var(--normalFontSize);
+  color: var(--textColor);
+  font-weight: 500;
+}
+.headerSection .searchBar {
+  padding: 1rem 2rem;
+  background-color: var(--whiteColor);
+  gap: 1rem;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.2px);
+  -webkit-backdrop-filter: blur(15.2px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.headerSection .searchBar input {
+  border: none;
+  outline: none;
+  background-color: none;
+}
+.headerSection .searchBar .icon {
+  color: var(--textColor);
+}
+.headerSection .searchBar .icon:hover {
+  color: var(--PrimaryColor);
+}
+.headerSection .adminDiv {
+  gap: 1rem;
+}
+.headerSection .adminDiv .icon {
+  font-size: var(--biggestFontSize);
+  background-color: var(--whiteColor);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 4px var(--inputColor);
+  color: var(--textColor);
+}
+.headerSection .adminDiv .adminImage {
+  border: 3px solid var(--whiteColor);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px var(--inputColor);
+}
+.headerSection .adminDiv .adminImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 918px) {
+  .headerSection .searchBar {
+    display: none;
+  }
+}
+@media screen and (max-width: 490px) {
+  .headerSection .adminDiv {
+    display: none;
+  }
+  .headerSection .title {
+    text-align: center;
+    margin: auto;
+  }
+}/*# sourceMappingURL=Header.css.map */
