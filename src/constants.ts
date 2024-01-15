@@ -18,6 +18,7 @@ export type BookModel = {
 export type AuthorModel = {
   id?: number;
   name: string;
+  description: string;
   profilImg: string;
 };
 export type CategoryModel = {

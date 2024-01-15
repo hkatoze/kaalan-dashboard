@@ -8,7 +8,13 @@ import { ClipLoader } from "react-spinners";
 import FilePicker from "../../../../../../Components/FilePicker";
 import TextField from "../../../../../../Components/TextField";
 import { PiStudent } from "react-icons/pi";
-import { ApiErrorResponse, AuthorModel, endpoint, headers } from "../../../../../../constants";
+import {
+  ApiErrorResponse,
+  AuthorModel,
+  endpoint,
+  headers,
+} from "../../../../../../constants";
+import TextAreaField from "../../../../../../Components/TextAreaField";
 
 export const EditAuthor = () => {
   const queryClient = useQueryClient();
@@ -30,7 +36,7 @@ export const EditAuthor = () => {
 
   const [profilImg, setUrrlProfilImg] = useState<string>("");
   const [name, setName] = useState<string>("");
-  
+  const [description, setDescription] = useState<string>("");
 
   const mutation = useMutation({
     mutationFn: (authorModel: Omit<AuthorModel, "id">) =>
@@ -48,7 +54,7 @@ export const EditAuthor = () => {
       setErrorMessage(error.response?.data?.message ?? "Erreur inconnue");
     },
   });
-   
+
   const handleOnChange = (event: FormEvent<HTMLInputElement>) => {
     const { name, value } = event.currentTarget;
 
@@ -56,18 +62,25 @@ export const EditAuthor = () => {
       setName(value);
     }
   };
-
+  const handleOnchangeTextArea = (event: FormEvent<HTMLTextAreaElement>) => {
+    const { name, value } = event.currentTarget;
+    if (name === "description") {
+      setDescription(value);
+    }
+  };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
     const name: string = formData.get("name") as string;
+    const description: string = formData.get("description") as string;
 
     const cover = profilImg ? profilImg : data?.data.data.author.profilImg;
 
     const editAuthor = {
       name: name,
+      description:description,
       profilImg: cover,
     };
 
@@ -77,6 +90,7 @@ export const EditAuthor = () => {
   useEffect(() => {
     if (!isLoading && !isError && data?.data?.data) {
       setName(data.data.data.author.name);
+      setDescription(data.data.data.author.description);
     }
   }, [isLoading, isError, data]);
 
@@ -114,6 +128,17 @@ export const EditAuthor = () => {
                   required={true}
                   onChange={handleOnChange}
                   value={name}
+                />
+              </div>
+              <div className="field">
+                <span>
+                  Description <div>*</div>
+                </span>
+                <TextAreaField
+                  placeholder="Décrivez l'auteur"
+                  name="description"
+                  onChange={handleOnchangeTextArea}
+                  value={description}
                 />
               </div>
 

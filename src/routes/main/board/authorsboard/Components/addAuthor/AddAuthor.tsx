@@ -9,13 +9,13 @@ import { PiStudent } from "react-icons/pi";
 import {
   ApiErrorResponse,
   AuthorModel,
- 
   endpoint,
   headers,
 } from "../../../../../../constants";
 
 import TextField from "../../../../../../Components/TextField";
 import FilePicker from "../../../../../../Components/FilePicker";
+import TextAreaField from "../../../../../../Components/TextAreaField";
 
 const AddAuthor = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -46,11 +46,13 @@ const AddAuthor = () => {
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
     const name: string = formData.get("name") as string;
+    const description: string = formData.get("description") as string;
 
     const cover = urlCover;
 
     const newAuthor = {
       name: name,
+      description:description,
       profilImg: cover,
     };
 
@@ -93,7 +95,15 @@ const AddAuthor = () => {
                   required={true}
                 />
               </div>
-
+              <div className="field">
+                <span>
+                  Description <div>*</div>
+                </span>
+                <TextAreaField
+                  placeholder="Décrivez l'auteur"
+                  name="description"
+                />
+              </div>
               <div className="field">
                 <span>
                   Image de profil de l'auteur<div>*</div>
