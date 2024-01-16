@@ -14,9 +14,11 @@ import {
 } from "../../../../../../constants";
 
 import TextField from "../../../../../../Components/TextField";
+import FilePicker from "../../../../../../Components/FilePicker";
 
 const AddCategory = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [urlIcon, setUrlIcon] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const queryClient = useQueryClient();
@@ -44,8 +46,10 @@ const AddCategory = () => {
     const formData = new FormData(form);
     const category: string = formData.get("category") as string;
 
+    const icon = urlIcon;
     const newCategory = {
       name: category,
+      icon: icon,
     };
 
     mutation.mutate(newCategory);
@@ -84,6 +88,17 @@ const AddCategory = () => {
                   placeholder="Nom de la catégorie"
                   name="category"
                   required={true}
+                />
+              </div>
+              <div className="field">
+                <span>
+                  Icon (format .svg)<div>*</div>
+                </span>
+                <FilePicker
+                  setUrl={setUrlIcon}
+                  name="icon"
+                  file="image"
+                  width={20}
                 />
               </div>
             </div>
