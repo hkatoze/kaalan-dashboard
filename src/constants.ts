@@ -24,6 +24,7 @@ export type AuthorModel = {
 export type CategoryModel = {
   id?: number;
   name: string;
+  icon: string;
 };
 //https://sore-gray-cygnet-wear.cyclic.app
 export const endpoint = "https://kaalan-api-0p6d.onrender.com";

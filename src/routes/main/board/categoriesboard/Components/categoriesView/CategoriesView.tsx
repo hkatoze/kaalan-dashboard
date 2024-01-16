@@ -28,7 +28,7 @@ export const CategoriesView = () => {
       <div className="body">
         <div className="categoriesList">
           {data?.data.data.map((category: CategoryModel) => (
-            <CategoryItem name={category.name} id={category.id?.toString()!} />
+            <CategoryItem icon={category.icon}  name={category.name} id={category.id?.toString()!} />
           ))}
 
           <div className="loadingSection">

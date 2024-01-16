@@ -5,10 +5,11 @@ import axios from "axios";
 import { endpoint, headers } from "../../../../../constants";
 interface CategoryItemProps {
   name: string;
+  icon: string;
   id: string;
 }
 
-export const CategoryItem = ({ name, id }: CategoryItemProps) => {
+export const CategoryItem = ({ name, id,icon }: CategoryItemProps) => {
   const queryClient = useQueryClient();
   const deleteMutation = useMutation({
     mutationFn: (categoryId: string) =>
@@ -26,7 +27,9 @@ export const CategoryItem = ({ name, id }: CategoryItemProps) => {
   return (
     <div className="categoryItem">
       <div className="leftSide">
-        <div className="square"></div>
+        <div className="square">
+          <img src={icon} alt="" />
+        </div>
         <h2>{name}</h2>
       </div>
       <MdDeleteOutline
