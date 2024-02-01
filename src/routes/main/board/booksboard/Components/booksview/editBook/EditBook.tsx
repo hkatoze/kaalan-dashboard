@@ -209,7 +209,7 @@ export const EditBook = () => {
                     authorsIsLoading
                       ? []
                       : authors?.data.data.map(
-                          (author: AuthorModel) => author.name
+                          (authorModel: AuthorModel) => authorModel.author.name
                         )
                   }
                   required={true}

@@ -16,18 +16,27 @@ export type BookModel = {
 };
 
 export type AuthorModel = {
+  
+  author: Author;
+  books: BookModel[];
+  
+  
+};
+
+export type Author = {
   id?: number;
   name: string;
   description: string;
   profilImg: string;
+  
 };
 export type CategoryModel = {
   id?: number;
   name: string;
   icon: string;
 };
-//https://sore-gray-cygnet-wear.cyclic.app
-export const endpoint = "https://kaalan-api-0p6d.onrender.com";
+//https://kaalan-api-0p6d.onrender.com
+export const endpoint = "http://localhost:3000";
 export interface Admin {
   emailAddress: string;
   password?: string;

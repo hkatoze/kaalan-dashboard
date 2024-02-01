@@ -6,7 +6,8 @@ import AUDIO_ICON from "../assets/audio-icon.png";
 import OTHER_ICON from "../assets/other-icon.png";
 import { ChangeEvent, useState } from "react";
 import { UploadClient } from "@uploadcare/upload-client";
-import { put } from "@vercel/blob";
+import axios from "axios";
+import { endpoint, headers } from "../constants";
 
 interface ImagePickerProps {
   indication?: string;
@@ -16,9 +17,9 @@ interface ImagePickerProps {
   required?: boolean;
   file: "image" | "video" | "audio" | "pdf" | "other";
 }
+
 const ImagePicker = ({
   indication,
-
   width,
   file,
   setUrl,
@@ -34,7 +35,6 @@ const ImagePicker = ({
   };
   const [filePickerUrl, setFilePickerUrl] = useState(icons[file]);
   const [filePicker, setFilePicker] = useState<File | null>(null);
-  useState();
   const [displayIndication, setDisplayIndication] = useState(true);
 
   //============>UploadCare API==========================================
@@ -46,11 +46,29 @@ const ImagePicker = ({
   };
   //=========================================================================
 
-  //============>UploadVercel API==========================================
-  const uploadFileOnVercelBlob = async function (file: File) {
-    const blob = await put(file.name, file, { access: "public" });
-    const url = Response.json(blob).url;
-    setUrl(url);
+  //============>Upload on Firebase==========================================
+  const uploadFileFirebaseStorage = async function (file: File) {
+    const formData = new FormData();
+    formData.append("pdf", file);
+
+    try {
+      const response = await axios.post(
+        `${endpoint}/api/upload`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMjA1MDIzOSwiZXhwIjoxNzMzNTg2MjM5fQ.vlAMLEwlVnkDYZRt5pz9QqaJtWoenAbf76gvrcNBSHk`,
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      const data = response.data;
+      console.log(data);
+      setUrl(data.url);
+    } catch (error) {
+      console.error("Erreur lors de l'upload:", error);
+    }
   };
   //=========================================================================
 
@@ -61,12 +79,12 @@ const ImagePicker = ({
 
       const url = URL.createObjectURL(filePicked);
 
-      if (file == "pdf") {
-        uploadFileOnVercelBlob(filePicked);
-      } else {
+      if (file === "image") {
         uploadFileOnUploadCare(filePicked);
-
         setFilePickerUrl(url);
+        setUrl(url);
+      } else {
+        uploadFileFirebaseStorage(filePicked);
       }
 
       setDisplayIndication(false);
@@ -84,7 +102,7 @@ const ImagePicker = ({
           htmlFor={`imagePicker${name}`}
         >
           <img
-            src={file == "image" ? filePickerUrl : icons[file]}
+            src={file === "image" ? filePickerUrl : icons[file]}
             style={{
               maxWidth: `${width! / 5.6 || 10 / 4}rem`,
               maxHeight: `${width! / 5.6 || 10 / 4}rem`,
@@ -99,7 +117,7 @@ const ImagePicker = ({
           )}
         </label>
 
-        {file == "pdf" ? (
+        {file === "pdf" ? (
           <input
             type="file"
             name={name}

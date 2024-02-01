@@ -10,6 +10,7 @@ import TextField from "../../../../../../Components/TextField";
 import { PiStudent } from "react-icons/pi";
 import {
   ApiErrorResponse,
+  Author,
   AuthorModel,
   endpoint,
   headers,
@@ -39,7 +40,7 @@ export const EditAuthor = () => {
   const [description, setDescription] = useState<string>("");
 
   const mutation = useMutation({
-    mutationFn: (authorModel: Omit<AuthorModel, "id">) =>
+    mutationFn: (authorModel: Omit<Author, "id">) =>
       axios
         .put(`${endpoint}/api/authors/${authorId}`, authorModel, {
           headers: headers,

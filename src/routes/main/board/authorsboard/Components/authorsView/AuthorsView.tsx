@@ -18,6 +18,10 @@ export const Authorsview = () => {
     queryKey: ["all-authors-list"],
     queryFn: fetchAllAuthors,
   });
+
+  if(!isLoading){
+    console.log(data);
+  }
   return (
     <div className="authorsview">
       <Header
@@ -28,11 +32,11 @@ export const Authorsview = () => {
 
       <div className="body">
         <div className="authorsList">
-          {data?.data.data.map((author: AuthorModel) => (
+          {data?.data.data.map((authorModel: AuthorModel) => (
             <AuthorItem
-              cover={author.profilImg}
-              title={author.name}
-              link={`/mainpage/authorsboard/authorsview/${author.id}`}
+              cover={authorModel.author.profilImg}
+              title={authorModel.author.name}
+              link={`/mainpage/authorsboard/authorsview/${authorModel.author.id}`}
             />
           ))}
         </div>
