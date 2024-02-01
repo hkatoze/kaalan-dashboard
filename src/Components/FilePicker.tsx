@@ -7,7 +7,7 @@ import OTHER_ICON from "../assets/other-icon.png";
 import { ChangeEvent, useState } from "react";
 import { UploadClient } from "@uploadcare/upload-client";
 import axios from "axios";
-import { endpoint, headers } from "../constants";
+import { endpoint } from "../constants";
 
 interface ImagePickerProps {
   indication?: string;

@@ -36,7 +36,7 @@ export type CategoryModel = {
   icon: string;
 };
 //https://kaalan-api-0p6d.onrender.com
-export const endpoint = "http://localhost:3000";
+export const endpoint = "https://kaalan-api-0p6d.onrender.com";
 export interface Admin {
   emailAddress: string;
   password?: string;
