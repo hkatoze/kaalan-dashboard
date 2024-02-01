@@ -8,7 +8,7 @@ import { ClipLoader } from "react-spinners";
 import { PiStudent } from "react-icons/pi";
 import {
   ApiErrorResponse,
-  AuthorModel,
+  Author,
   endpoint,
   headers,
 } from "../../../../../../constants";
@@ -25,7 +25,7 @@ const AddAuthor = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const mutation = useMutation({
-    mutationFn: (authorModel: Omit<AuthorModel, "id">) =>
+    mutationFn: (authorModel: Omit<Author, "id">) =>
       axios
         .post(`${endpoint}/api/authors`, authorModel, { headers: headers })
         .then((res) => res.data),
