@@ -16,11 +16,8 @@ export type BookModel = {
 };
 
 export type AuthorModel = {
-  
   author: Author;
   books: BookModel[];
-  
-  
 };
 
 export type Author = {
@@ -28,7 +25,6 @@ export type Author = {
   name: string;
   description: string;
   profilImg: string;
-  
 };
 export type CategoryModel = {
   id?: number;
@@ -36,7 +32,7 @@ export type CategoryModel = {
   icon: string;
 };
 //https://kaalan-api-0p6d.onrender.com
-export const endpoint = "https://kaalan-api-0p6d.onrender.com";
+export const endpoint = "https://kaalan-api.onrender.com";
 export interface Admin {
   emailAddress: string;
   password?: string;
