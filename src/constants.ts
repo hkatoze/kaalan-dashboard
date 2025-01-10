@@ -1,5 +1,5 @@
 export const headers = {
-  Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMjA1MDIzOSwiZXhwIjoxNzMzNTg2MjM5fQ.vlAMLEwlVnkDYZRt5pz9QqaJtWoenAbf76gvrcNBSHk`,
+  Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTczNjUzNDYyNCwiZXhwIjoxNzY4MDcwNjI0fQ.0bi2vZ3gcbpj_SnpM9s_rdXrCUpwkZS7p4Wu-Ucy-24`,
   "Content-Type": "application/json",
 };
 
